@@ -27,13 +27,13 @@ var temporaryPosition = new THREE.Vector3
   , temporaryVector = new THREE.Vector3
 
 
-Camera.prototype.cameraPosition = function() {
+View.prototype.cameraPosition = function() {
   temporaryPosition.multiplyScalar(0)
   this.camera.matrixWorld.multiplyVector3(temporaryPosition)
   return temporaryPosition
 }
 
-Camera.prototype.cameraVector = function() {
+View.prototype.cameraVector = function() {
   temporaryVector.multiplyScalar(0)
   temporaryVector.z = -1
   this.camera.matrixWorld.multiplyVector3(temporaryVector)
@@ -41,7 +41,7 @@ Camera.prototype.cameraVector = function() {
   return temporaryVector
 }
 
-Camera.prototype.resizeWindow = function(width, height) {
+View.prototype.resizeWindow = function(width, height) {
   this.camera.aspect = this.aspectRatio = width/height
 
   this.camera.updateProjectionMatrix()
@@ -49,6 +49,6 @@ Camera.prototype.resizeWindow = function(width, height) {
   this.renderer.setSize( width, height )
 }
 
-Camera.prototype.render = function(scene) {
+View.prototype.render = function(scene) {
   this.renderer.render(scene, this.camera)
 }
