@@ -1,0 +1,97 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.1.46
+3 info using node@v0.8.5
+4 verbose config file /Users/scott/.npmrc
+5 verbose config file /usr/local/etc/npmrc
+6 verbose config file /usr/local/lib/node_modules/npm/npmrc
+7 verbose publish [ '.' ]
+8 verbose read json /Users/scott/projects/voxeljs/voxel-hello-world/node_modules/voxel-engine/node_modules/voxel-view/package.json
+9 verbose cache add [ '.', null ]
+10 silly cache add name=undefined spec="." args=[".",null]
+11 verbose parsed url { pathname: '.', path: '.', href: '.' }
+12 silly lockFile 3a52ce78- .
+13 verbose lock . /Users/scott/.npm/3a52ce78-.lock
+14 verbose read json package.json
+15 verbose tar pack [ '/var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/tmp.tgz',
+15 verbose tar pack   '.' ]
+16 verbose tarball /var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/tmp.tgz
+17 verbose folder .
+18 info prepublish voxel-view@0.0.1
+19 silly lockFile fe1009e4-859366-0-907529714750126-tmp-tgz /var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/tmp.tgz
+20 verbose lock /var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/tmp.tgz /Users/scott/.npm/fe1009e4-859366-0-907529714750126-tmp-tgz.lock
+21 silly lockFile fe1009e4-859366-0-907529714750126-tmp-tgz /var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/tmp.tgz
+22 verbose tar unpack /var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/tmp.tgz
+23 silly lockFile 4347fbd4-859366-0-907529714750126-package /var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/package
+24 verbose lock /var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/package /Users/scott/.npm/4347fbd4-859366-0-907529714750126-package.lock
+25 silly gunzTarPerm modes [ '755', '644' ]
+26 silly gunzTarPerm extractEntry package.json
+27 silly gunzTarPerm extractEntry README.md
+28 silly gunzTarPerm extractEntry index.js
+29 verbose read json /var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/package/package.json
+30 silly lockFile 4347fbd4-859366-0-907529714750126-package /var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/package
+31 verbose from cache /var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/package/package.json
+32 verbose tar pack [ '/Users/scott/.npm/voxel-view/0.0.1/package.tgz',
+32 verbose tar pack   '/var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/package' ]
+33 verbose tarball /Users/scott/.npm/voxel-view/0.0.1/package.tgz
+34 verbose folder /var/folders/xs/pp6tlvnj3b9fs00lxx5qkyvc0000gn/T/npm-20198/1360855859366-0.907529714750126/package
+35 silly lockFile 2fd504e3-npm-voxel-view-0-0-1-package-tgz /Users/scott/.npm/voxel-view/0.0.1/package.tgz
+36 verbose lock /Users/scott/.npm/voxel-view/0.0.1/package.tgz /Users/scott/.npm/2fd504e3-npm-voxel-view-0-0-1-package-tgz.lock
+37 silly lockFile 2fd504e3-npm-voxel-view-0-0-1-package-tgz /Users/scott/.npm/voxel-view/0.0.1/package.tgz
+38 silly lockFile afdf71a0-ott-npm-voxel-view-0-0-1-package /Users/scott/.npm/voxel-view/0.0.1/package
+39 verbose lock /Users/scott/.npm/voxel-view/0.0.1/package /Users/scott/.npm/afdf71a0-ott-npm-voxel-view-0-0-1-package.lock
+40 silly lockFile afdf71a0-ott-npm-voxel-view-0-0-1-package /Users/scott/.npm/voxel-view/0.0.1/package
+41 verbose tar unpack /Users/scott/.npm/voxel-view/0.0.1/package.tgz
+42 silly lockFile afdf71a0-ott-npm-voxel-view-0-0-1-package /Users/scott/.npm/voxel-view/0.0.1/package
+43 verbose lock /Users/scott/.npm/voxel-view/0.0.1/package /Users/scott/.npm/afdf71a0-ott-npm-voxel-view-0-0-1-package.lock
+44 silly gunzTarPerm modes [ '755', '644' ]
+45 silly gunzTarPerm extractEntry package.json
+46 silly gunzTarPerm extractEntry README.md
+47 silly gunzTarPerm extractEntry index.js
+48 verbose read json /Users/scott/.npm/voxel-view/0.0.1/package/package.json
+49 silly lockFile afdf71a0-ott-npm-voxel-view-0-0-1-package /Users/scott/.npm/voxel-view/0.0.1/package
+50 silly shasum updated bytes 1025
+51 info shasum 465a03f2e5b70730d3e7863bebc4e60ab71a495d
+51 info shasum /Users/scott/.npm/voxel-view/0.0.1/package.tgz
+52 verbose from cache /Users/scott/.npm/voxel-view/0.0.1/package/package.json
+53 verbose chmod /Users/scott/.npm/voxel-view/0.0.1/package.tgz 644
+54 verbose chown /Users/scott/.npm/voxel-view/0.0.1/package.tgz [ 501, 20 ]
+55 silly lockFile 3a52ce78- .
+56 silly publish { name: 'voxel-view',
+56 silly publish   version: '0.0.1',
+56 silly publish   description: 'a default camera & renderer for voxeljs',
+56 silly publish   main: 'index.js',
+56 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+56 silly publish   repository: { type: 'git', url: 'git://github.com/snagy/voxel-view.git' },
+56 silly publish   keywords: [ 'voxeljs', 'camera' ],
+56 silly publish   author: { name: 'Scott Nagy', email: 'scottanagy@gmail.com' },
+56 silly publish   dependencies: { three: '0.54.0' },
+56 silly publish   license: 'MIT',
+56 silly publish   readmeFilename: 'README.md',
+56 silly publish   readme: 'view functionality for voxeljs',
+56 silly publish   _id: 'voxel-view@0.0.1',
+56 silly publish   _from: 'voxel-view@0.0.1',
+56 silly publish   dist: { shasum: '465a03f2e5b70730d3e7863bebc4e60ab71a495d' } }
+57 verbose url raw voxel-view
+58 verbose url resolving [ 'https://registry.npmjs.org/', './voxel-view' ]
+59 verbose url resolved https://registry.npmjs.org/voxel-view
+60 info retry registry request attempt 1 at 07:30:59
+61 http PUT https://registry.npmjs.org/voxel-view
+62 http 409 https://registry.npmjs.org/voxel-view
+63 verbose url raw voxel-view
+64 verbose url resolving [ 'https://registry.npmjs.org/', './voxel-view' ]
+65 verbose url resolved https://registry.npmjs.org/voxel-view
+66 info retry registry request attempt 1 at 07:30:59
+67 http GET https://registry.npmjs.org/voxel-view
+68 http 200 https://registry.npmjs.org/voxel-view
+69 error publish fail Cannot publish over existing version.
+69 error publish fail Bump the 'version' field, set the --force flag, or
+69 error publish fail     npm unpublish 'voxel-view@0.0.1'
+69 error publish fail and try again
+70 error System Darwin 12.2.0
+71 error command "node" "/usr/local/bin/npm" "publish"
+72 error cwd /Users/scott/projects/voxeljs/voxel-hello-world/node_modules/voxel-engine/node_modules/voxel-view
+73 error node -v v0.8.5
+74 error npm -v 1.1.46
+75 error code EPUBLISHCONFLICT
+76 verbose exit [ 1, true ]
