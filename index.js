@@ -43,6 +43,11 @@ View.prototype.cameraVector = function() {
 }
 
 View.prototype.resizeWindow = function(width, height) {
+  if( this.element.parentElement ) {
+    width = this.element.parentElement.clientWidth
+    height = this.element.parentElement.clientHeight
+  }
+
   this.camera.aspect = this.aspectRatio = width/height
 
   this.camera.updateProjectionMatrix()
@@ -52,4 +57,15 @@ View.prototype.resizeWindow = function(width, height) {
 
 View.prototype.render = function(scene) {
   this.renderer.render(scene, this.camera)
+}
+
+View.prototype.appendTo = function(element) {
+  if (typeof element === 'object') {
+    element.appendChild(this.element)
+  }
+  else {
+    document.querySelector(element).appendChild(this.element)
+  }
+
+  this.resizeWindow(this.width,this.height)
 }
