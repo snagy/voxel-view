@@ -9,6 +9,7 @@ function View(opts) {
   this.aspectRatio = opts.aspectRatio || this.width/this.height
   this.nearPlane = opts.nearPlane || 1
   this.farPlane = opts.farPlane || 10000
+  this.skyColor = opts.skyColor || 0xBFD1E5
   this.camera = new THREE.PerspectiveCamera(this.fov, this.aspectRatio, this.nearPlane, this.farPlane)
   this.camera.lookAt(new THREE.Vector3(0, 0, 0))
 
