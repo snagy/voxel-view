@@ -4,13 +4,14 @@ module.exports = View
 
 function View(opts) {
   this.fov = opts.fov || 60
-  this.width = opts.width || 512;
-  this.height = opts.height || 512;
+  this.width = opts.width || 512
+  this.height = opts.height || 512
   this.aspectRatio = opts.aspectRatio || this.width/this.height
   this.nearPlane = opts.nearPlane || 1
   this.farPlane = opts.farPlane || 10000
   this.skyColor = opts.skyColor || 0xBFD1E5
-  this.camera = new THREE.PerspectiveCamera(this.fov, this.aspectRatio, this.nearPlane, this.farPlane)
+  this.ortho = opts.ortho
+  this.camera = this.ortho?(new THREE.OrthographicCamera(this.width/-2, this.width/2, this.height/2, this.height/-2, this.nearPlane, this.farPlane)):(new THREE.PerspectiveCamera(this.fov, this.aspectRatio, this.nearPlane, this.farPlane))
   this.camera.lookAt(new THREE.Vector3(0, 0, 0))
 
   this.renderer = new THREE.WebGLRenderer({
