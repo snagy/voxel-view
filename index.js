@@ -24,6 +24,14 @@ function View(opts) {
   this.element = this.renderer.domElement
 }
 
+View.prototype.bindToScene = function(scene) {
+  scene.add(this.camera)
+}
+
+View.prototype.getCamera = function() {
+  return this.camera
+}
+
 
 var temporaryPosition = new THREE.Vector3
   , temporaryVector = new THREE.Vector3
