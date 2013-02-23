@@ -1,8 +1,14 @@
-var THREE = require('three')
+var THREE, temporaryPosition, temporaryVector
 
-module.exports = View
+module.exports = function(three, opts) {
+  temporaryPosition = new three.Vector3
+  temporaryVector = new three.Vector3
+  
+  return new View(three, opts)
+}
 
-function View(opts) {
+function View(three, opts) {
+  THREE = three // three.js doesn't support multiple instances on a single page
   this.fov = opts.fov || 60
   this.width = opts.width || 512
   this.height = opts.height || 512
@@ -14,14 +20,19 @@ function View(opts) {
   this.camera = this.ortho?(new THREE.OrthographicCamera(this.width/-2, this.width/2, this.height/2, this.height/-2, this.nearPlane, this.farPlane)):(new THREE.PerspectiveCamera(this.fov, this.aspectRatio, this.nearPlane, this.farPlane))
   this.camera.lookAt(new THREE.Vector3(0, 0, 0))
 
+  if (!process.browser) return
+
+  this.createRenderer()
+  this.element = this.renderer.domElement
+}
+
+View.prototype.createRenderer = function() {
   this.renderer = new THREE.WebGLRenderer({
     antialias: true
   })
   this.renderer.setSize(this.width, this.height)
   this.renderer.setClearColorHex(this.skyColor, 1.0)
   this.renderer.clear()
-
-  this.element = this.renderer.domElement
 }
 
 View.prototype.bindToScene = function(scene) {
@@ -31,11 +42,6 @@ View.prototype.bindToScene = function(scene) {
 View.prototype.getCamera = function() {
   return this.camera
 }
-
-
-var temporaryPosition = new THREE.Vector3
-  , temporaryVector = new THREE.Vector3
-
 
 View.prototype.cameraPosition = function() {
   temporaryPosition.multiplyScalar(0)
