@@ -46,15 +46,14 @@ View.prototype.getCamera = function() {
 View.prototype.cameraPosition = function() {
   temporaryPosition.multiplyScalar(0)
   this.camera.matrixWorld.multiplyVector3(temporaryPosition)
-  return temporaryPosition
+  return [temporaryPosition.x, temporaryPosition.y, temporaryPosition.z]
 }
 
 View.prototype.cameraVector = function() {
   temporaryVector.multiplyScalar(0)
   temporaryVector.z = -1
-  this.camera.matrixWorld.multiplyVector3(temporaryVector)
-  temporaryVector.subSelf(this.cameraPosition()).normalize()
-  return temporaryVector
+  this.camera.matrixWorld.rotateAxis(temporaryVector)
+  return [temporaryVector.x, temporaryVector.y, temporaryVector.z]
 }
 
 View.prototype.resizeWindow = function(width, height) {
