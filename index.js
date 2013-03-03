@@ -57,12 +57,14 @@ View.prototype.cameraVector = function() {
 }
 
 View.prototype.resizeWindow = function(width, height) {
-  if( this.element.parentElement ) {
-    width = this.element.parentElement.clientWidth
-    height = this.element.parentElement.clientHeight
+  if (this.element.parentElement) {
+    width = width || this.element.parentElement.clientWidth
+    height = height || this.element.parentElement.clientHeight
   }
 
   this.camera.aspect = this.aspectRatio = width/height
+  this.width = width
+  this.height = height
 
   this.camera.updateProjectionMatrix()
 
