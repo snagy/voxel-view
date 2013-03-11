@@ -45,7 +45,7 @@ View.prototype.getCamera = function() {
 
 View.prototype.cameraPosition = function() {
   temporaryPosition.multiplyScalar(0)
-  this.camera.matrixWorld.multiplyVector3(temporaryPosition)
+  temporaryPosition.applyMatrix4(this.camera.matrixWorld)
   return [temporaryPosition.x, temporaryPosition.y, temporaryPosition.z]
 }
 
