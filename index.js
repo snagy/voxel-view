@@ -45,7 +45,7 @@ View.prototype.getCamera = function() {
 
 View.prototype.cameraPosition = function() {
   temporaryPosition.multiplyScalar(0)
-  this.camera.matrixWorld.multiplyVector3(temporaryPosition)
+  temporaryPosition.applyMatrix4(this.camera.matrixWorld)
   return [temporaryPosition.x, temporaryPosition.y, temporaryPosition.z]
 }
 
@@ -57,12 +57,14 @@ View.prototype.cameraVector = function() {
 }
 
 View.prototype.resizeWindow = function(width, height) {
-  if( this.element.parentElement ) {
-    width = this.element.parentElement.clientWidth
-    height = this.element.parentElement.clientHeight
+  if (this.element.parentElement) {
+    width = width || this.element.parentElement.clientWidth
+    height = height || this.element.parentElement.clientHeight
   }
 
   this.camera.aspect = this.aspectRatio = width/height
+  this.width = width
+  this.height = height
 
   this.camera.updateProjectionMatrix()
 
