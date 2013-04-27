@@ -52,7 +52,7 @@ View.prototype.cameraPosition = function() {
 View.prototype.cameraVector = function() {
   temporaryVector.multiplyScalar(0)
   temporaryVector.z = -1
-  this.camera.matrixWorld.rotateAxis(temporaryVector)
+  temporaryVector.transformDirection( this.camera.matrixWorld )
   return [temporaryVector.x, temporaryVector.y, temporaryVector.z]
 }
 
