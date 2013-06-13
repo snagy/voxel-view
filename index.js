@@ -32,6 +32,9 @@ View.prototype.createRenderer = function(opts) {
   this.renderer = new THREE.WebGLRenderer(opts)
   this.renderer.setSize(this.width, this.height)
   this.renderer.setClearColorHex(this.skyColor, 1.0)
+  this.renderer.gammaInput = opts.gammaInput !== false
+  this.renderer.gammaOutput = opts.gammaOutput !== false
+  this.renderer.physicallyBasedShading = opts.physicallyBasedShading !== false
   this.renderer.clear()
 }
 
