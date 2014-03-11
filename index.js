@@ -28,7 +28,7 @@ function View(three, opts) {
 
 View.prototype.createRenderer = function(opts) {
   opts = opts || {}
-  opts.antialias = opts.antialias || true
+  if(opts.antialias == null) opts.antialias = true
   this.renderer = new THREE.WebGLRenderer(opts)
   this.renderer.setSize(this.width, this.height)
   this.renderer.setClearColorHex(this.skyColor, 1.0)
