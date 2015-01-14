@@ -32,7 +32,7 @@ View.prototype.createRenderer = function(opts) {
   this.renderer = new THREE.WebGLRenderer(opts)
   this.renderer.setSize(this.width, this.height)
   this.renderer.setClearColorHex(this.skyColor, 1.0)
-  this.renderer.clear()
+  this.renderer.clear(this.renderer.getClearColor())
 }
 
 View.prototype.bindToScene = function(scene) {
